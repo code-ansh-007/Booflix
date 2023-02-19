@@ -1,0 +1,58 @@
+:root{
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+body{
+    background: var(--primary);
+}
+
+.box{
+    position: relative;
+    top: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 19px;
+}
+
+.box2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 19px;
+}
+
+.main-box{
+    display: flex;
+    justify-content: center;
+    color: var(--primary);
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+.or{
+    position: relative;
+    top: 250px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    color: var(--dark);
+}
+
+.title-font{
+    font-family: 'Bebas Neue', cursive;
+    word-spacing:0.1cm;
+    font-size: 25px;
+}
+
+.login{
+    position:relative;
+    top: 78px;
+    margin: 15px;
+    padding: 45px;
+    background: var(--dark);
+    border-radius: 20px;
+}
+
+.inp{
+    font-size: 18px;
+    border-radius: 14px;
+    padding-left: 11px;
+}

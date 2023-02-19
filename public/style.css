@@ -1,0 +1,487 @@
+:root{
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+.container{
+    display: grid;
+    grid-gap: 4px;
+}
+
+body{
+    background: #ccc;
+    /* margin:0px; */
+    line-height: 1.4;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+    /* padding:0; */
+}
+
+.title{
+    background:  #5c5859;
+    height: 45px;
+    padding-left: 15px;
+    padding-top: 9px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.title h2{
+    padding-top: 10px;
+    margin:0;
+    display: inline;
+}
+
+.web-icon{
+    padding-left: 17px;
+    padding-top: 5px;
+    font-size:25px;
+}
+
+/* This is the NAVBAR */
+
+.main_nav ul{
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    grid-template-columns: repeat(4,1fr);
+    list-style: none;
+}
+
+.main_nav a{
+    display:block;
+    text-decoration: none;
+    color: var(--dark);
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0.4rem;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.main_nav a:hover{
+    color:var(--light);
+    background: var(--dark);
+}
+
+/* This is the big box in which all the latest movies wil be displayed */
+
+.top-container{
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-areas:
+    'updates updates mr-box mr-box'
+    'updates updates mr-box mr-box';
+}
+
+.updates{
+    grid-area: updates;
+    color: var(--primary);
+    height: 400px;
+    width: 700px;
+    background-image: url(horror.jpg);
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-radius: 10px;
+    animation: slider 20s infinite;
+}
+
+@keyframes slider {
+    0%{background-image: url(horror0.jpg);}
+    25%{background-image: url(horror1.jpg);}
+    50%{background-image: url(horror2.webp);}
+    75%{background-image: url(horror3.jpg);}
+    100%{background-image: url(horror4.jpg);}
+}
+
+.rent{
+    text-align: right;
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.rent a{
+    text-decoration: none;
+    color: var(--dark);
+    padding-left:12px;
+    padding-right:12px;
+    padding-top:4px;
+    padding-bottom:4px;
+    margin: 8px;
+    display: inline-block;
+    position:relative;
+    right: 119px;
+    bottom: 8px;
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.rent a:hover{
+    color: var(--light);
+    background: var(--dark);
+}
+
+.updates p{
+    position: relative;
+    bottom:-115px;
+    margin-top: 7px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+.updates h1 a{ 
+    text-decoration: none;
+    position: relative;
+    bottom:-115px;
+    margin-bottom: 0;
+    color: white;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: rgba(243, 204, 204, 0.315); */
+}
+
+.mr-box{
+    background: var(--dark);
+    width: 200px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.mr-box:hover{
+    opacity:0.6;
+}
+
+#m1{
+    background-image: url(movie1.avif);
+    background-size: 100% 129%;
+    box-shadow: var(--shadow);
+}
+
+#m2{
+    background-image: url(movie2.avif);
+    background-size: 100% 129%;
+    box-shadow: var(--shadow);
+    
+}
+
+#m3
+{
+    background-image: url(movie3.avif);
+    background-size: 100% 129%;
+    box-shadow: var(--shadow);
+}
+
+#m4{
+    background-image: url(movie4.jpg);
+    background-size: 100% 100%;
+    box-shadow: var(--shadow);
+}
+
+.search{
+    position: absolute;
+    /* width:215px; */
+    background: #2f3640;
+    /* padding-top: 15px; */
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    top: 130px;
+}
+
+.search:hover > .search-text{
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-btn{
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.search:hover > .search-btn{
+    background: white;
+}
+
+.search-text{
+    border:none;
+    background: none;
+    outline:none;
+    float: left;
+    padding: 0px;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width:0px;
+}
+
+.binge{
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+    padding-top:25px;
+}
+
+.binge-pic{
+    background-image: url(binge.jpg);
+    width: 597px;
+    background-size: 100% 100%;
+    /* padding-left: 50px; */
+    margin-left: 19px;
+    margin-top: 18px;
+    box-shadow: 0 1px 8px rgba(87, 86, 86, 0.8);
+    border-radius: 10px;
+}
+
+.binge-txt{
+    align-items: center;
+    justify-items: center;
+}
+
+.binge-txt .big-txt{
+    padding-top: 0px;
+    margin-top: 56px;
+    font-size: 65px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.mini-txt{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 26px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 55px;
+}
+
+.rental{
+    display: grid;
+    padding-top: 60px;
+    padding-bottom: 25px;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.rental-txt{
+    padding-top: 0px;
+    margin-top: 56px;
+    /* padding-right: 0; */
+    padding-left: 75px;
+    font-size: 65px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.rental-pic{
+    background-image: url(rental.jpg);
+    /* width: 485px; */
+    background-size: 100% 100%;
+    /* width: 450px; */
+    /* padding-left: 50px; */
+    margin-left:25px;
+    margin-top: 18px;
+    box-shadow: 0 1px 8px rgba(87, 86, 86, 0.8);
+    border-radius: 10px;
+}
+
+.req{
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.req-txt{
+    position:relative;
+    top:100px;
+    left: 80px;
+}
+
+.submit{
+    border-radius: 40px;
+    position: relative;
+    top: 15px;
+    font-size: 15px;
+    padding:5px;
+    background:#d66a4f ;
+    font-family: 'Ubuntu', sans-serif;
+    left: 3px;
+}
+
+.req-txt p{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 65px;
+    padding:0;
+    margin:0;
+    margin-top: 25px;
+}
+
+
+.req-inp{
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    outline:none;
+    padding: 4px 10px;
+    color: white;
+    font-size: 15px;
+    line-height: 40px;
+    width: 323px;
+}
+
+.req-exp{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 65px;
+}
+
+.supercat{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-gap: 15px;
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.cat-txt{
+    margin-bottom: -10px;
+    background: #5c5859;
+    box-shadow: var(--shadow);
+    color:var(--primary);
+    text-align: center;
+    border-radius: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cat{
+    width: 150px;
+    border-radius: 120px;
+    height: 150px;
+    text-align: center;
+    background: #000;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+    vertical-align: center;
+    /* line-height: -58px; */
+}
+
+.cat-margin{
+    margin-top: 31px;
+    margin-bottom: 22px;
+}
+
+.cat a{
+    text-decoration: none;
+    color: var(--dark);
+    position: relative;
+    top: 157px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#cat1{
+    background-image: url(thriller.jpg);
+    background-size: 100% 108%;
+}
+#cat1:hover{
+    opacity: 0.6;
+}
+
+#cat2{
+    background-image: url(anime.jpg);
+    background-size: 100% 115%;
+}
+#cat2:hover{
+    opacity: 0.6;
+}
+
+#cat3{
+    background-image: url(crime.jpg) ;
+    background-size: 110% 102%;
+}
+#cat3:hover{
+    opacity: 0.6;
+}
+
+#cat4{
+    background-image:url(inspire.jpg);
+    background-size: 115% 100%;
+}
+#cat4:hover{
+    opacity: 0.6;
+}
+
+#cat5{
+    background-image: url(romance.jpg);
+    background-size: 126% 100%;
+}
+#cat5:hover{
+    opacity: 0.6;
+}
+
+#cat6{
+    background-image: url(sol.jpg);
+    background-size: 100% 100%;
+}
+#cat6:hover{
+    opacity: 0.6;
+}
+
+#cat7{
+    background-image: url(vintage.jpg);
+    background-size: 100% 100%;
+}
+#cat7:hover{
+    opacity: 0.6;
+}
+
+#cat8{
+    background-image: url(war.jpg);
+    background-size: 122% 100%;
+}
+#cat8:hover{
+    opacity: 0.6;
+}
+
+
+footer{
+    text-align: center;
+    background: #5c5859;
+    margin-top: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px;
+    padding-left: 115px;
+    border-radius: 10px;
+}
+
+.social{
+    position: relative;
+    left: 430px;
+    top: 3px;
+    text-decoration: none;
+    font-size: 25px;
+    padding-left: 8px;
+    color: var(--primary);
+}

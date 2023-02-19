@@ -1,0 +1,27 @@
+:root{
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+body{
+    background: var(--primary);
+}
+
+.con{
+    text-align: center;
+}
+
+.con p{
+    font-family: sans-serif;
+}
+
+.sub-title{
+    font-size: 21px;
+}
+
+.main-title{
+    font-family: 'Bebas Neue';
+    font-size:35px;
+}

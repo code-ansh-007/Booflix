@@ -1,0 +1,75 @@
+:root{
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+body{
+    background: #ccc;
+    margin: 20px;
+    padding: 10px;
+}
+
+.welcome-div h1{
+    margin-bottom: 0;
+    margin-top:0;
+    font-size: 54px;
+    font-family: 'Anton', sans-serif;
+}
+
+.welcome-div p{
+    font-family: 'Anton', sans-serif;
+    font-size: 35px;
+    padding:0;
+    margin: 0;
+}
+
+.bold{
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+    padding:0;
+    word-spacing:0.3rem;
+    margin:0;
+}
+.usp p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.boo{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    padding:0px;
+    margin: 0px;
+}
+
+/* .boo-img{
+    width: 450px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+    position:relative;
+    bottom: 75px;
+    right: 50px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-radius: 10px;
+} */
+
+.border-img{
+    /* height: px; */
+    width: 366px;
+    height: 228px;
+    /* padding-left: 50px; */
+    margin-left: 153px;
+    position: relative;
+    bottom: 56px;
+    right: 50px;
+    border-radius: 10px;
+    padding-bottom: 0;
+    background-image: url(booflix.jpg);
+    background-size: 100% 100%;
+}
